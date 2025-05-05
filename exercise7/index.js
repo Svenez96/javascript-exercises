@@ -1,0 +1,1 @@
+let word = prompt('inserisci una parola')
