@@ -1,6 +1,8 @@
-do {
-    word = prompt ('Inserisci una parola da massimo 5 caratteri')
-} 
-while (word.length >= 5)
+let input
 
-    console.log(word)
+do {
+    input = prompt ('Inserisci una parola da almeno 5 caratteri')
+} 
+while (input.length <= 4)
+
+    console.log(input)
