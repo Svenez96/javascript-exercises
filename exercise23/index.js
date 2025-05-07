@@ -6,3 +6,4 @@ function outerFunction(x) {
 }
 
 console.log(outerFunction(15)(40));  
+
