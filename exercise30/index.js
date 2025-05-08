@@ -1,9 +1,6 @@
 const expenses = [7.90, 19.99, 12.49, 3.50]
 
-const sum = expenses.reduce((accumulator, current) => {
-   return accumulator + current
-}
-, 0 )
+const sum = expenses.reduce((accumulator, current) => accumulator + current)
 
 console.log(sum)
 
