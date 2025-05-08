@@ -1,13 +1,14 @@
-const student = {
-   name: "Giovanni Belardi",
-   age: 16,
-   grade: 60,
-   school: "Example School"
+const expenses = [7.90, 19.99, 12.49, 3.50]
+
+const sum = expenses.reduce((accumulator, current) => {
+   return accumulator + current
 }
+, 0 )
 
-const entries = Object.entries(student)
-console.log(entries)
+console.log(sum)
 
-entries.forEach(([key, value]) => {
-   console.log(` ${key} : ${value} `)
-})
+const words = ["banana","apple","cherry","date"]
+
+words.sort ()
+
+console.log(words)
