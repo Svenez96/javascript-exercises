@@ -1,13 +1,18 @@
-const student = {
-   name: "Giovanni Belardi",
-   age: 16,
-   grade: 60,
-   school: "Example School"
-}
+const students = [
+   {name:"Giovanni Belardi", grade: 50},
+   {name:"Roberto Grimaldi", grade: 60},
+   {name:"Carmelo Strati", grade: 85},
+   {name:"Demetrio Cisafrulli", grade: 55},
+   {name:"Francesco Trimarchi", grade: 75}
+];
 
-const entries = Object.entries(student)
-console.log(entries)
+console.log(students);
 
-entries.forEach(([key, value]) => {
-   console.log(` ${key} : ${value} `)
-})
+const passedStudents = students.filter((student) => student.grade >= 60 );
+
+console.log(passedStudents);
+
+const firstStudent = students.find((student) => student.grade < 60);
+
+
+console.log(firstStudent);
