@@ -6,4 +6,4 @@ const squaredNumbers = numbers.map((num) => {
    return(num ** 2);
 });
 
-console.log(squaredNumbers(num**2));
+console.log(squaredNumbers);
