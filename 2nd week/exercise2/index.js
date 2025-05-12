@@ -31,8 +31,7 @@ class autoInfoKm extends Automobile{
    }
 }
 
-subaruBaracca.aggiungiChilometri(150);
 
 const subaruBaracca = new autoInfoKm("Subaru", "Baracca", 1999, 0);
-
+subaruBaracca.aggiungiChilometri(150);
 console.log(subaruBaracca.mostraChilometraggio());
