@@ -30,8 +30,9 @@ class autoInfoKm extends Automobile{
    return (`Questa è una ${this.marca} ${this.modello} del ${this.anno}. Chilometraggio attuale: ${this.chilometraggio} km`)
    }
 }
-  
-  const subaruBaracca = new autoInfoKm("Subaru", "Baracca", 1999, 0);
-  subaruBaracca.aggiungiChilometri(0)
-  subaruBaracca.mostraChilometraggio()
-  console.log(subaruBaracca.mostraChilometraggio());
+
+subaruBaracca.aggiungiChilometri(150);
+
+const subaruBaracca = new autoInfoKm("Subaru", "Baracca", 1999, 0);
+
+console.log(subaruBaracca.mostraChilometraggio());
