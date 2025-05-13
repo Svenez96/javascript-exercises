@@ -11,6 +11,10 @@ class Automobile {
     this.chilometraggio = chilometraggio;
   }
 
+  description() {
+    return `Questa è una ${this.marca} ${this.modello} del ${this.anno}.`;
+  }
+
   aggiungiChilometri(km) {
     if (km > 0) {
       this.chilometraggio += km;
@@ -20,11 +24,12 @@ class Automobile {
   }
 
   mostraChilometraggio() {
-    return (`Questa è una ${this.marca} ${this.modello} del ${this.anno}. Chilometraggio attuale: ${this.chilometraggio} km`)
+    return (`Chilometraggio attuale: ${this.chilometraggio} km`)
   }
 }
 
 
 const subaruBaracca = new Automobile("Subaru", "Baracca", 1999, 0);
+console.log(subaruBaracca.description());
 subaruBaracca.aggiungiChilometri(150);
 console.log(subaruBaracca.mostraChilometraggio());
