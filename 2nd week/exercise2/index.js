@@ -1,37 +1,30 @@
-class Automobile{
+class Automobile {
   marca = "";
   modello = "";
   anno = 0;
-
-    constructor(marca, modello, anno){
-      this.marca = marca;
-      this.modello = modello;
-      this.anno = anno;
-    }
-  }
-
-class autoInfoKm extends Automobile{
   chilometraggio = 0;
 
-  constructor(marca, modello, anno, chilometraggio){
-    super(marca, modello, anno);
+  constructor(marca, modello, anno, chilometraggio) {
+    this.marca = marca;
+    this.modello = modello;
+    this.anno = anno;
     this.chilometraggio = chilometraggio;
   }
 
-  aggiungiChilometri(km){
+  aggiungiChilometri(km) {
     if (km > 0) {
       this.chilometraggio += km;
     } else {
       console.log("inserire un valore d'incremento");
     }
-   } 
-  
-  mostraChilometraggio(){
-   return (`Questa è una ${this.marca} ${this.modello} del ${this.anno}. Chilometraggio attuale: ${this.chilometraggio} km`)
-   }
+  }
+
+  mostraChilometraggio() {
+    return (`Questa è una ${this.marca} ${this.modello} del ${this.anno}. Chilometraggio attuale: ${this.chilometraggio} km`)
+  }
 }
 
 
-const subaruBaracca = new autoInfoKm("Subaru", "Baracca", 1999, 0);
+const subaruBaracca = new Automobile("Subaru", "Baracca", 1999, 0);
 subaruBaracca.aggiungiChilometri(150);
 console.log(subaruBaracca.mostraChilometraggio());
