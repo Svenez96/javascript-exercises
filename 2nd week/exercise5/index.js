@@ -27,6 +27,7 @@ class Automobile {
   return `Chilometraggio attuale: ${this.chilometraggio} km`;
   }
 
+//metodo privato
   #calcolaEtà(){
     const annoCorrente = new Date().getFullYear()
     return annoCorrente - this.anno;

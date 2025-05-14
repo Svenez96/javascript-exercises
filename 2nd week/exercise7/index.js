@@ -36,7 +36,6 @@ class Automobile {
     return `Età dell'automobile: ${this.#calcolaEtà()} anni`;
   }
 
- //metodo protetto 
   _controllaChilometri(){
     if (this.chilometraggio > 100000) {
       return "Attenzione: chilometraggio elevato!";
