@@ -42,7 +42,7 @@ class Automobile {
     }
   }
 
-  static confrontaChilometraggio(auto1, auto2){
+  static confrontaChilometri(auto1, auto2){
     if (auto1.chilometraggio > auto2.chilometraggio){
       return `${auto1.marca} ${auto1.modello} ha più chilometri.`;
     } else if (auto2.chilometraggio > auto1.chilometraggio) {
@@ -81,5 +81,5 @@ class Elettrica extends Automobile{
 
 const subaruBaracca = new Automobile("Subaru", "Baracca", 1999, 200000);
 const subaruBaraccaElettrica = new Elettrica("Subaru", "Baracca", 1999, 20000, 250);
-console.log(Automobile.confrontaChilometraggio(subaruBaracca, subaruBaraccaElettrica))
+console.log(Automobile.confrontaChilometri(subaruBaracca, subaruBaraccaElettrica))
 
