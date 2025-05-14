@@ -2,43 +2,53 @@ class Automobile {
   marca = "";
   modello = "";
   anno = 0;
-  chilometraggio = 0;
+  _chilometraggio = 0;
 
-   //Contatore
    #contatoreChiamate = 0;
 
   constructor(marca, modello, anno, chilometraggio){
     this.marca = marca;
     this.modello = modello;
     this.anno = anno;
-    this.chilometraggio = chilometraggio;
+    this._chilometraggio = chilometraggio;
   }
 
   description(){
     return `Questa è una ${this.marca} ${this.modello} del ${this.anno}.`;
   }
 
-  //incremento del contatore
   #incrementoContatore(){
     this.#contatoreChiamate++;
   }
 
   aggiungiChilometri(km){
-    //aggiunto il contatore chiamate
     this.#incrementoContatore();
     if (km > 0) {
-      this.chilometraggio += km;
+      this._chilometraggio += km;
     } else {
       console.log("inserire un valore d'incremento");
     }
   }
 
   mostraContatore(){
-    return `Il metodo è stato chiamato ${this.#contatoreChiamate} volte.`
+    return `Il metodo aggiungiChilometri è stato chiamato ${this.#contatoreChiamate} volte.`
+  }
+
+  get chilometraggioAttuale(){
+    return this._chilometraggio;
+  }
+
+  // Setter
+  set chilometraggio(km){
+    if (km >= this._chilometraggio){
+      this._chilometraggio = km;
+    } else {
+      console.log("Non puoi diminuire il chilometraggio");
+    }
   }
 
   mostraChilometraggio(){
-  return `Chilometraggio attuale: ${this.chilometraggio} km`;
+  return `Chilometraggio attuale: ${this._chilometraggio} km`;
   }
 
   #calcolaEtà(){
@@ -51,31 +61,31 @@ class Automobile {
   }
 
   _controllaChilometri(){
-    if (this.chilometraggio > 100000) {
+    if (this._chilometraggio > 100000) {
       return "Attenzione: chilometraggio elevato!";
     }
   }
 
   static confrontaChilometri(auto1, auto2){
-    if (auto1.chilometraggio > auto2.chilometraggio){
+    if (auto1.chilometraggioAttuale > auto2.chilometraggioAttuale){
       return `${auto1.marca} ${auto1.modello} ha più chilometri.`;
-    } else if (auto2.chilometraggio > auto1.chilometraggio) {
+    } else if (auto2.chilometraggioAttule > auto1.chilometraggioAttuale) {
       return `${auto2.marca} ${auto2.modello} ha più chilometri.`;
     } else {
       return "Le automobili hanno gli stessi chilometri"
     }  
   }
+
 }
 
 Automobile.prototype.saluta = function(){
   return `Ciao utente, questa è una ${this.marca} ${this.modello}`;
 }
 
-//sottoclasse elettrica 
 class Elettrica extends Automobile{
   autonomia = 0;
-  constructor(marca, modello, anno, chilometraggio, autonomia){
-    super(marca, modello, anno, chilometraggio);
+  constructor(marca, modello, anno, _chilometraggio, autonomia){
+    super(marca, modello, anno, _chilometraggio);
     this.autonomia = autonomia;
   }
 
@@ -93,10 +103,10 @@ class Elettrica extends Automobile{
 }
 
 
-const subaruBaracca = new Automobile("Subaru", "Baracca", 1999, 200000);
+const subaruBaracca = new Automobile("Subaru", "Baracca", 1999, 50000);
 const subaruBaraccaElettrica = new Elettrica("Subaru", "Baracca", 1999, 20000, 250);
-subaruBaracca.aggiungiChilometri(200);
-subaruBaracca.aggiungiChilometri(300);
-subaruBaracca.aggiungiChilometri(400);
-console.log(subaruBaracca.mostraContatore());
+
+subaruBaracca.chilometraggio = 60000;
+subaruBaracca.chilometraggio = 40000;
+console.log(subaruBaracca.chilometraggioAttuale);
 
