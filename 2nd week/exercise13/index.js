@@ -102,6 +102,12 @@ class Elettrica extends Automobile{
   }
 }
 
+// NEW CLASS
+class Camion extends Automobile{
+  constructor(marca, modello, anno, _chilometraggio){
+    super(marca, modello, anno, _chilometraggio);
+  }
+}
 
 const subaruBaracca = new Automobile("Subaru", "Baracca", 1999, 50000);
 const subaruBaraccaElettrica = new Elettrica("Subaru", "Baracca", 1999, 20000, 250);
