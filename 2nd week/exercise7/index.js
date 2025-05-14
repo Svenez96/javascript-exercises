@@ -41,6 +41,16 @@ class Automobile {
       return "Attenzione: chilometraggio elevato!";
     }
   }
+
+  static confrontaChilometraggio(auto1, auto2){
+    if (auto1.chilometraggio > auto2.chilometraggio){
+      return `${auto1.marca} ${auto1.modello} ha più chilometri.`;
+    } else if (auto2.chilometraggio > auto1.chilometraggio) {
+      return `${auto2.marca} ${auto2.modello} ha più chilometri.`;
+    } else {
+      return "Le automobili hanno gli stessi chilometri"
+    }  
+  }
 }
 
 Automobile.prototype.saluta = function(){
@@ -71,6 +81,5 @@ class Elettrica extends Automobile{
 
 const subaruBaracca = new Automobile("Subaru", "Baracca", 1999, 200000);
 const subaruBaraccaElettrica = new Elettrica("Subaru", "Baracca", 1999, 20000, 250);
-console.log(subaruBaracca._controllaChilometri())
-
+console.log(Automobile.confrontaChilometraggio(subaruBaracca, subaruBaraccaElettrica))
 

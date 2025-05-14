@@ -70,8 +70,8 @@ class Elettrica extends Automobile{
 }
 
 
-const subaruBaracca = new Automobile("Subaru", "Baracca", 1999, 200000);
-const subaruBaraccaElettrica = new Elettrica("Subaru", "Baracca", 1999, 20000, 250);
-console.log(subaruBaracca._controllaChilometri())
+const subaruBaracca = new Automobile("Subaru", "Baracca", 1999, 20000);
+const subaruBaraccaElettrica = new Elettrica("Subaru", "Baracca", 1999, 200000, 250);
+console.log(subaruBaraccaElettrica._controllaChilometri())
 
 
