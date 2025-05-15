@@ -75,6 +75,13 @@ class Automobile {
     }  
   }
 
+  static verificaIstanza(obj, classe){
+    if (obj instanceof classe){
+      return `L'oggetto è un'istanza di ${classe.name}.`;
+    }  else {
+      return `L'oggetto non è un'istanza di ${classe.name}.`;
+    }
+  }
 }
 
 Automobile.prototype.saluta = function(){
@@ -105,9 +112,10 @@ class Camion extends Automobile{
   caricoMassimo = 0;
   caricoAttuale = 0;
 
-  constructor(marca, modello, anno, _chilometraggio, caricoMassimo){
+  constructor(marca, modello, anno, _chilometraggio, caricoMassimo, caricoAttuale){
     super(marca, modello, anno, _chilometraggio);
     this.caricoMassimo = caricoMassimo;
+    this.caricoAttuale = caricoAttuale;
   }
 
   description(){
@@ -124,11 +132,14 @@ class Camion extends Automobile{
     }
 }
 
+
 const subaruBaracca = new Automobile("Subaru", "Baracca", 1999, 50000);
 const subaruBaraccaElettrica = new Elettrica("Subaru", "Baracca", 1999, 20000, 250);
 const ciamioncino = new Camion("Ford", "Premium", 2010, 40000, 2000);
-ciamioncino.carica(3000);
-ciamioncino.carica(1500);
-console.log(ciamioncino.description());
+
+console.log(Automobile.verificaIstanza(subaruBaracca, Automobile));
+console.log(Automobile.verificaIstanza(subaruBaracca, Camion));
+console.log(Automobile.verificaIstanza(ciamioncino, Elettrica));
+console.log(Automobile.verificaIstanza(ciamioncino, Automobile));
 
 
