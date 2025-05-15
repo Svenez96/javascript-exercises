@@ -105,10 +105,9 @@ class Camion extends Automobile{
   caricoMassimo = 0;
   caricoAttuale = 0;
 
-  constructor(marca, modello, anno, _chilometraggio, caricoMassimo, caricoAttuale){
+  constructor(marca, modello, anno, _chilometraggio, caricoMassimo){
     super(marca, modello, anno, _chilometraggio);
     this.caricoMassimo = caricoMassimo;
-    this.caricoAttuale = caricoAttuale;
   }
 
   description(){
