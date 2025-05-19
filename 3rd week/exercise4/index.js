@@ -1,7 +1,9 @@
-const array = [1, 2, 3, 4];
+const manga = {
+    autore: "Sui Ishida",
+    titolo: "Tokyo Ghoul",
+    target: "seinen"
+}
 
-let [uno, due, tre, quattro] = array;
+let {autore, titolo, target} = manga;
 
-console.log("Questo è il primo numero:", uno)
-console.log("Questo è il terzo numero:", tre)
-
+console.log("manga:",titolo,"scritto e sceneggiato da:",autore)
