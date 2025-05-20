@@ -1,13 +1,4 @@
-const persona = {
-    nome: "Mario",
-    cognome: "Rossi",
-    eta: 32,
-    professione: "impiegato",
-    nazionalita: "italiana"
-};
+const smartphoneInJson = '{"marca":"Apple", "colore":"bianco"}';
+const smartphone = JSON.parse(smartphoneInJson);
 
-const {nome, cognome, ...resto } = persona;
-
-console.log(nome);
-console.log(cognome);
-console.log(resto);
+console.log(smartphone);
