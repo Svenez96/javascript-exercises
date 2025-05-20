@@ -1,13 +1,12 @@
-const persona = {
-    nome: "Mario",
-    cognome: "Rossi",
-    eta: 32,
-    professione: "impiegato",
-    nazionalita: "italiana"
-};
+const polterguys = `[
+    {"nome": "Marco", "cognome": "Merrino"},
+    {"nome": "Daniele", "cognome" :"Simonetti"}
+]`;
 
-const {nome, cognome, ...resto } = persona;
+const listaDiPersone = JSON.parse(polterguys);
 
-console.log(nome);
-console.log(cognome);
-console.log(resto);
+listaDiPersone.push({"nome": "Ciccio", "cognome" :"Merrino"});
+
+const polterguys3 = JSON.stringify(listaDiPersone);
+
+console.log(polterguys3)
