@@ -1,13 +1,14 @@
 const persona = {
-    nome: "Mario",
-    cognome: "Rossi",
-    eta: 32,
-    professione: "impiegato",
-    nazionalita: "italiana"
+    nome: "Domenico",
+    cognome: "Mazza",
+    eta: 29,
+    citta: "Reggio Calabria"
 };
 
-const {nome, cognome, ...resto } = persona;
-
-console.log(nome);
-console.log(cognome);
-console.log(resto);
+const messaggio = `
+    Ciao, 
+    mi chiamo ${persona.nome} ${persona.cognome}
+    ho ${persona.eta} anni
+    e vivo a ${persona.citta}. 
+`
+console.log(messaggio)
