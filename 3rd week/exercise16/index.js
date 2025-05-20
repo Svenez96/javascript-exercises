@@ -1,13 +1,6 @@
-const persona = {
-    nome: "Mario",
-    cognome: "Rossi",
-    eta: 32,
-    professione: "impiegato",
-    nazionalita: "italiana"
-};
+const nome = "Michele";
+const nickname = "Mike of the Desert";
 
-const {nome, cognome, ...resto } = persona;
+const motto = `Ragazzi welcome back. Io sono ${nome}, conosciuto anche come ${nickname} sul web.`
 
-console.log(nome);
-console.log(cognome);
-console.log(resto);
+console.log(motto)
