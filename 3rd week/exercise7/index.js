@@ -1,9 +1,8 @@
-const manga = {
-    autore: "Takehiko Inoue",
-    titolo: "Vagabond",
-    target: "seinen"
-}
+let numeri = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-let { autore: scrittore, titolo: nomeOpera, target: pubblico } = manga;
+const contenitore = [...numeri];
 
-console.log("manga:",nomeOpera,"scritto e sceneggiato da:",scrittore)
+numeri = [1, 2, 3, 6, 7, 8];
+
+console.log(numeri);
+console.log(contenitore);
