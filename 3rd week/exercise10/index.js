@@ -1,8 +1,10 @@
-let numeri = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+function numeri(valore1, valore2, valore3, ...altriValori){
+   return (
+    "Primo valore: "+ valore1 + 
+    ", Secondo valore: " + valore2 + 
+    ", Terzo valore: " + valore3 + 
+    ", Altri valori: " + altriValori
+);
+};
 
-const contenitore = [...numeri];
-
-numeri = [1, 2, 3, 6, 7, 8];
-
-console.log(numeri);
-console.log(contenitore);
+console.log(numeri(1, 2, 3, 4, 5, 6))
