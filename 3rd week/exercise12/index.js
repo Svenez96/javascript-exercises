@@ -1,10 +1,13 @@
-function numeri(valore1, valore2, valore3, ...altriValori){
-   return (
-    "Primo valore: "+ valore1 + 
-    ", Secondo valore: " + valore2 + 
-    ", Terzo valore: " + valore3 + 
-    ", Altri valori: " + altriValori
-);
+const persona = {
+    nome: "Mario",
+    cognome: "Rossi",
+    eta: 32,
+    professione: "impiegato",
+    nazionalita: "italiana"
 };
 
-console.log(numeri(1, 2, 3, 4, 5, 6))
+const {nome, cognome, ...resto } = persona;
+
+console.log(nome);
+console.log(cognome);
+console.log(resto);
