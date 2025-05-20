@@ -1,10 +1,7 @@
-function numeri(valore1, valore2, valore3, ...altriValori){
-   return (
-    "Primo valore: "+ valore1 + 
-    ", Secondo valore: " + valore2 + 
-    ", Terzo valore: " + valore3 + 
-    ", Altri valori: " + altriValori
-);
+function sum (...num){
+    return num.reduce((acc,cur) => acc + cur, 0)
 };
 
-console.log(numeri(1, 2, 3, 4, 5, 6))
+console.log(sum(1,2,3));
+console.log(sum(10,20,30));
+console.log(sum(15,25,50));
