@@ -10,3 +10,16 @@ setTimeout(() => {
 }, 5000);
 
 console.log(timer);
+
+// Ho sperimentato con questo timer
+// let numero = 5;
+
+// const contoAllaRovescia = setInterval(() => {
+//     console.log(numero);
+//     numero--;
+    
+//     if(numero < 0){
+//         clearInterval(contoAllaRovescia);
+//    console.log("Timer terminato");
+//     };
+// }, 1000);
