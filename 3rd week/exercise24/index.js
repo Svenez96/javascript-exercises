@@ -1,14 +1,12 @@
-console.table(["Centauromon", "Garurumon", "Kabuterimon", "Metalgreymon", "Sukamon", "Monzaemon"]);
+function timer(){
+    console.log("1 secondo");
+};
 
-console.log("Lvl 0: Botamon");
-console.group();
-console.log("Lvl 1: Koromon");
-console.group();
-console.log("Lvl 2: Agumon");
-console.group();
-console.log("Lvl 3: Greymon");
-console.group();
-console.log("Lvl 4: Metalgreymon");
-console.group();
-console.log("Lvl 5: Wargreymon");
-console.groupEnd();
+const intervallo = setInterval(timer, 1000);
+
+setTimeout(() => {
+    clearInterval(intervallo);
+        console.log("Sono passati 5 secondi. Intervallo interrotto.")
+}, 5000);
+
+console.log(timer);
