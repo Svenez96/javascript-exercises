@@ -1,15 +1,19 @@
-function divide(num1, num2){
+function errorsCheck(value){
     try {
-        if (num2 === 0){
-            throw new Error("You can't divide by zero.");
-        } 
-        let result = num1 / num2;
-        return result
+        if (typeof value !== "string"){
+            throw new Error("The value must be a string");
+        } else if (value.trim().length === 0){
+            throw new Error("You must insert a value");
+        } else {
+            console.log("This value is a string")
+        }
+
     } catch (error) {
-        return error
+        console.error(error.message);
     }
     
 };
 
-console.log(divide(5, 2))
-console.log(divide(5, 0))
+errorsCheck("Carbone")
+errorsCheck(12)
+errorsCheck("  ")
