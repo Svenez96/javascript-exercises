@@ -1,12 +1,16 @@
-function timer(){
-    console.log("1 secondo");
+function systemMessage(value){
+    try {
+       if (value.trim().length === 0){
+           throw new Error ("System Message Error... You must enter a value.");
+       } else {
+           console.log(value + ". " + "System Message Logged."); 
+       };
+    } catch (error) {
+        console.error(error);
+    } finally {
+        console.log("System Message Process Completed.");
+    };
 };
 
-const intervallo = setInterval(timer, 1000);
-
-setTimeout(() => {
-    clearInterval(intervallo);
-        console.log("Sono passati 5 secondi. Intervallo interrotto.")
-}, 5000);
-
-console.log(timer);
+systemMessage(" ");
+systemMessage("Inizialization Complete");
