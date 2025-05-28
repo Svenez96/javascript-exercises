@@ -1,9 +1,17 @@
-const pokémon = {
-    nome:"Charmender",
-    tipo:"fuoco",
-    evoluzione:"Charmeleon"
-};
+let verification = true
 
-let {nome, tipo, evoluzione, debolezze = "acqua, terra, roccia"} = pokémon;
+let promise = new Promise(function(resolve, reject){
+    setTimeout(() => {
+        if (verification){
+            resolve("Access Granted") 
+        } else {
+            reject("Access Denied")
+        } 
+        
+    }, 2000)
+});
 
-console.log("Nome pokémon:",nome,"Tipo:",tipo,"Si evolve in:",evoluzione,"è debole contro:",debolezze )
+promise
+.then(result => console.log(result))
+.catch(error => console.log(error))
+.finally(() => console.log("Welcome"))
