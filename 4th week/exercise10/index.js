@@ -1,7 +1,17 @@
-function sum (...num){
-    return num.reduce((acc,cur) => acc + cur, 0)
-};
+function avviaSpedizione() {
+    return new Promise((consegna, smarrimento) => {
+        let paccoTracciato = false
+        setTimeout(() => {
+            if (paccoTracciato) {
+                consegna("Pacco consegnato con successo")
+            } else {
+                smarrimento("Pacco smarrito durante il trasporto")
+            }
+        }, 1000)
+    })
+}
 
-console.log(sum(1,2,3));
-console.log(sum(10,20,30));
-console.log(sum(15,25,50));
+avviaSpedizione()
+    .then(result => console.log(result))
+    .catch(error => console.warn(error))
+
