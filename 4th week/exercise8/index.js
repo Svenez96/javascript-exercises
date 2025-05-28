@@ -1,5 +1,22 @@
-const numeriPari = [2, 4, 6, 8, 10] 
-const numeriDispari = [1, 3, 5, 7, 9]
-const numeri = [...numeriPari, ...numeriDispari];
-
-console.log(numeri);
+function controlloNumero() {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(6); 
+      }, 1000);
+    });
+  }
+  
+  controlloNumero()
+    .then((numero) => {
+        if (numero %2 === 0){
+            return numero * 2;
+        } else {
+            return numero + 3
+        }
+    })
+   
+    .then((risultato) => {
+      console.log("Il numero è:", risultato);
+    });
+  
+  
