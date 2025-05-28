@@ -1,31 +1,19 @@
-let mostraRisultato = new Promise(function(resolve, reject){
-  let ok = true
-  if (ok){
-    resolve ("Hello User!")
-  } else {
-    reject ("Whoooops")
-  }
-})
+function restituisciNumero() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(4); 
+    }, 1000);
+  });
+}
 
-let mostraAltroRisultato = new Promise(function(resolve, reject){
-  let ok = false
-  if (ok){
-    resolve ("Hello User!")
-  } else {
-    reject ("Whoooops")
-  }
-})
-
-mostraRisultato
-
-.then (function (risultato) {
-        console.log(risultato)
-        return mostraAltroRisultato
-    })
-
-.then (function (altroRisultato) {
-        console.log(altroRisultato)
-    })
-.catch (error => console.error(error))
-
+restituisciNumero()
+  .then((numero) => {
+    return numero * 2;
+  })
+  .then((moltiplicato) => {
+    return moltiplicato + 3;
+  })
+  .then((risultato) => {
+    console.log("Il risultato è:", risultato);
+  });
 
