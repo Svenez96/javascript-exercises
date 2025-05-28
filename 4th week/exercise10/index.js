@@ -1,17 +1,11 @@
-function avviaSpedizione() {
-    return new Promise((consegna, smarrimento) => {
-        let paccoTracciato = false
+function errorCheck() {
+    return new Promise((resolve , reject) => {
         setTimeout(() => {
-            if (paccoTracciato) {
-                consegna("Pacco consegnato con successo")
-            } else {
-                smarrimento("Pacco smarrito durante il trasporto")
-            }
+            reject("Whops...Something went wrong")
         }, 1000)
     })
 }
 
-avviaSpedizione()
-    .then(result => console.log(result))
+errorCheck()
     .catch(error => console.warn(error))
 
