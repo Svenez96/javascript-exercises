@@ -1,18 +1,18 @@
 let mostraRisultato = new Promise(function(resolve, reject){
   let ok = true
   if (ok){
-    resolve ("Franco")
+    resolve ("Hello User!")
   } else {
-    reject ("Giuanni")
+    reject ("Whoooops")
   }
 })
 
 let mostraAltroRisultato = new Promise(function(resolve, reject){
   let ok = false
   if (ok){
-    resolve ("Franco")
+    resolve ("Hello User!")
   } else {
-    reject ("Giuanni")
+    reject ("Whoooops")
   }
 })
 
