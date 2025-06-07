@@ -1,12 +1,20 @@
-async function messaggio(){
-    return new Promise ((resolve) => {
+function messaggio(){
+    return new Promise ((resolve, reject) => {
         setTimeout(() => {
             resolve("OK")
+            //reject("Qualcosa è andato storto")
         },2000)
 }
 )};
 
-let result = await messaggio()
+async function ricezione() {
+    try {
+        let result = await messaggio()
+            console.log("Messaggio ricevuto:", result)
+    } catch (error) {
+        console.error("Errore nella ricezione del messaggio:", error)
+    }
+}
 
-console.log(result)
+ricezione()
 
